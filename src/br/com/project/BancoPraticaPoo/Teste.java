@@ -9,13 +9,13 @@ public class Teste {
 
 
         contaCorrente.depositar(50);
-        System.out.println(contaCorrente.verificarSaldo());
+        System.out.println(contaCorrente.getSaldo());
         contaCorrente.sacar(30);
 
         
 
         contaCorrente.transferir(contaCorrente2, 10);
-        System.out.println(contaCorrente2.verificarSaldo());
+        System.out.println(contaCorrente2.getSaldo());
         
     }
 }

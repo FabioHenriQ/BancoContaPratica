@@ -2,9 +2,9 @@ package br.com.project.BancoPraticaPoo;
 
 public class Conta {
     
-    double saldo = 0.0;
-    int agencia;
-    int numero;
+    private double saldo = 0.0;
+    private int agencia;
+    private int numero;
     
     public Conta() {
 
@@ -29,10 +29,6 @@ public class Conta {
 
     }
 
-    public String verificarSaldo() {
-        return "O saldo da conta é: " + this.saldo;
-    }
-
     public void transferir(Conta NumeroContaDestino, double valor) {
         if (valor > this.saldo) {
             System.out.println("Falha ao transferir R$ " + valor +". Saldo insuficiente. Seu saldo atual é: R$ " + this.saldo);
@@ -41,5 +37,25 @@ public class Conta {
             this.saldo -= valor;
             System.out.println("Você transferiu R$ " + valor +" Para: " + NumeroContaDestino.numero + ". Seu Saldo atual é: R$ " + this.saldo);
         }
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 }
